@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Muhammad Bilal — AI Engineer & Full Stack Developer. BS Computer Science, 6th Semester. Specializing in AI, ML, React.js, Node.js.">
+<meta name="keywords" content="Muhammad Bilal, AI Engineer, Full Stack Developer, Machine Learning, React.js, Python, Portfolio">
+<meta property="og:title" content="Muhammad Bilal — AI Engineer & Full Stack Developer">
+<meta property="og:description" content="Building intelligent systems with clean code. BS Computer Science student specializing in AI/ML and Full Stack Development.">
+<title>Muhammad Bilal — AI Engineer & Full Stack Developer</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%236366f1' width='180' height='180'/><text x='90' y='105' font-family='Syne, sans-serif' font-size='80' font-weight='700' fill='white' text-anchor='middle'>MB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">MB</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark mode">◐</button>
+    <a href="https://wa.me/923018032287" target="_blank" rel="noopener" class="btn-hire">Hire Me</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge reveal">
+      <span class="dot"></span>
+      Available for work &amp; collaboration
+    </div>
+    <h1 class="hero-name reveal reveal-delay-1">
+      <span class="first">Muhammad </span><br>
+      <span class="last">Bilal</span>
+    </h1>
+    <div class="hero-type reveal reveal-delay-2">
+      I build <span class="typed-word" id="typed"></span><span class="cursor-blink"></span>
+    </div>
+    <p class="hero-desc reveal reveal-delay-3">
+      A BS Computer Science student (6th Semester, CGPA 3.0) specializing in Artificial Intelligence,
+      Machine Learning, and Full Stack Development — turning complex problems into intelligent, scalable solutions.
+    </p>
+    <div class="hero-ctas reveal reveal-delay-4">
+      <a href="#projects" class="btn-primary">View Projects ↓</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+      <a href="https://wa.me/923018032287" target="_blank" rel="noopener" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <div class="visitor-bar reveal">
+      <span class="visitor-dot"></span>
+      <span id="visitor-count" class="visitor-count">1,247</span>
+      <span>visitors · Portfolio is live</span>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="stat-item">
+        <div class="stat-num" data-target="5">0</div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="20">0</div>
+        <div class="stat-label">Technologies</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="6">0</div>
+        <div class="stat-label">Semesters</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3.0</div>
+        <div class="stat-label">CGPA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="reveal">
+      <div class="about-avatar">
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring2"></div>
+        <div class="avatar-inner">
+          <div class="avatar-initials">MB</div>
+        </div>
+        <div class="avatar-badge">AI Engineer</div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Building the <span>future</span><br>with code &amp; AI</h2>
+      <p class="about-text">
+        I'm a passionate Computer Science student with a strong foundation in AI, machine learning, and full stack development.
+        My journey spans from building intelligent face expression detection systems to architecting scalable web APIs —
+        always chasing the intersection of clean engineering and real-world impact.
+      </p>
+      <p class="about-text">
+        With proficiency in Python, React.js, Node.js, Kotlin, and multiple database systems, I thrive on solving complex
+        challenges. My academic background in FSC Pre-Medical gives me a unique analytical edge in medical AI applications
+        like my Lung Cancer Detection model.
+      </p>
+      <div class="about-tags">
+        <span class="about-tag">🤖 AI / ML</span>
+        <span class="about-tag">⚛️ React.js</span>
+        <span class="about-tag">🟢 Node.js</span>
+        <span class="about-tag">📱 Android</span>
+        <span class="about-tag">🗄️ Databases</span>
+        <span class="about-tag">🌐 Networking</span>
+      </div>
+      <div class="about-edu">
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <div class="edu-degree">BS Computer Science</div>
+            <div class="edu-meta">6th Semester · Ongoing</div>
+            <div class="edu-score">CGPA: 3.0 · AI &amp; Full Stack Specialization</div>
+          </div>
+        </div>
+        <div class="edu-card reveal reveal-delay-1">
+          <div class="edu-icon">📚</div>
+          <div>
+            <div class="edu-degree">FSC Pre-Medical</div>
+            <div class="edu-meta">Higher Secondary Certificate</div>
+            <div class="edu-score">775 Marks</div>
+          </div>
+        </div>
+        <div class="edu-card reveal reveal-delay-2">
+          <div class="edu-icon">📖</div>
+          <div>
+            <div class="edu-degree">Matriculation</div>
+            <div class="edu-meta">Secondary School Certificate</div>
+            <div class="edu-score">912 Marks · Top Performer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills">
+  <div class="section-label reveal">What I Know</div>
+  <h2 class="section-title reveal">Technical <span>Expertise</span></h2>
+  <p class="section-sub reveal">20+ technologies across AI, web, mobile, databases, and networking</p>
+  <div class="skills-grid">
+
+    <div class="skill-category reveal">
+      <div class="skill-cat-icon">🤖</div>
+      <div class="skill-cat-title">AI &amp; Machine Learning</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">Python</span><span class="skill-bar-pct">88%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="88"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">Machine Learning</span><span class="skill-bar-pct">82%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="82"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">Artificial Intelligence</span><span class="skill-bar-pct">80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">Face Expression Detection</span><span class="skill-bar-pct">78%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="78"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">Lung Cancer Detection AI</span><span class="skill-bar-pct">75%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="75"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category reveal reveal-delay-1">
+      <div class="skill-cat-icon">⚛️</div>
+      <div class="skill-cat-title">Frontend Development</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">HTML &amp; CSS</span><span class="skill-bar-pct">90%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">Tailwind CSS</span><span class="skill-bar-pct">85%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-pct">80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">React.js</span><span class="skill-bar-pct">82%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="82"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category reveal reveal-delay-2">
+      <div class="skill-cat-icon">⚙️</div>
+      <div class="skill-cat-title">Backend &amp; Databases</div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">Node.js &amp; Express</span><span class="skill-bar-pct">78%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="78"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">SQL Databases</span><span class="skill-bar-pct">80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header"><span class="skill-bar-name">Neo4j Graph Database</span><span class="skill-bar-pct">70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-w="70"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-category reveal reveal-delay-1">
+      <div class="skill-cat-icon">💻</div>
+      <div class="skill-cat-title">Languages &amp; Mobile</div>
+      <div class="skill-tags">
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">Data Structures</span>
+        <span class="skill-tag">Java OOP</span>
+        <span class="skill-tag">C# Advanced</span>
+        <span class="skill-tag">Kotlin Android</span>
+        <span class="skill-tag">Computer Networking</span>
+        <span class="skill-tag">Android Dev</span>
+        <span class="skill-tag">REST APIs</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects">
+  <div class="section-label reveal">What I've Built</div>
+  <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+  <div class="projects-filter reveal">
+    <button class="filter-btn active" data-cat="all">All Projects</button>
+    <button class="filter-btn" data-cat="AI/ML">🤖 AI &amp; ML</button>
+    <button class="filter-btn" data-cat="Database">🗄️ Database</button>
+    <button class="filter-btn" data-cat="Mobile">📱 Mobile</button>
+    <button class="filter-btn" data-cat="Networking">🌐 Networking</button>
+  </div>
+  <div class="projects-grid" id="projects-grid">
+
+    <div class="project-card reveal" data-cat="AI/ML">
+      <div class="project-card-top"></div>
+      <div class="project-card-body">
+        <div class="project-cat-badge ai">AI / Machine Learning</div>
+        <h3 class="project-title">AI Face Expression Detection</h3>
+        <p class="project-desc">Real-time emotion recognition system using Python and deep learning. Accurately identifies 7 core human emotions — happy, sad, angry, surprised, fearful, disgusted, neutral — from live camera feed using convolutional neural networks.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">OpenCV</span>
+          <span class="tech-tag">CNN</span>
+          <span class="tech-tag">ML</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link">View Details →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1" data-cat="AI/ML">
+      <div class="project-card-top violet"></div>
+      <div class="project-card-body">
+        <div class="project-cat-badge medical">Medical AI</div>
+        <h3 class="project-title">Lung Cancer Detection AI Model</h3>
+        <p class="project-desc">Intelligent diagnostic AI for lung cancer prediction using medical imaging datasets and ML algorithms. High accuracy in differentiating malignant from benign pulmonary nodules for early-stage diagnosis support.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Scikit-learn</span>
+          <span class="tech-tag">TensorFlow</span>
+          <span class="tech-tag">Medical Imaging</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link">View Details →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2" data-cat="Database">
+      <div class="project-card-top amber"></div>
+      <div class="project-card-body">
+        <div class="project-cat-badge db">Database Engineering</div>
+        <h3 class="project-title">Database Management Systems</h3>
+        <p class="project-desc">Comprehensive database solutions using SQL and Neo4j graph databases. Complex schemas, optimized queries, and graph-based data relationship models for efficient retrieval and management at scale.</p>
+        <div class="project-tech">
+          <span class="tech-tag">SQL</span>
+          <span class="tech-tag">Neo4j</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Graph DB</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link">View Details →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-cat="Mobile">
+      <div class="project-card-top green"></div>
+      <div class="project-card-body">
+        <div class="project-cat-badge mobile">Mobile Development</div>
+        <h3 class="project-title">Kotlin Android Applications</h3>
+        <p class="project-desc">Feature-rich Android applications with modern architecture using MVVM pattern, RecyclerView, Room database, Retrofit for API calls, and Material Design components for a polished user experience.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Kotlin</span>
+          <span class="tech-tag">Android</span>
+          <span class="tech-tag">MVVM</span>
+          <span class="tech-tag">Retrofit</span>
+          <span class="tech-tag">Room DB</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link">View Details →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1" data-cat="Networking">
+      <div class="project-card-top blue"></div>
+      <div class="project-card-body">
+        <div class="project-cat-badge net">Computer Networking</div>
+        <h3 class="project-title">Computer Networking Projects</h3>
+        <p class="project-desc">Complex networking scenarios covering routing protocols (OSPF, RIP, BGP), switching, VLAN configuration, IP subnetting, and network topology design using Cisco Packet Tracer simulations.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Cisco Packet Tracer</span>
+          <span class="tech-tag">OSPF</span>
+          <span class="tech-tag">VLAN</span>
+          <span class="tech-tag">BGP</span>
+          <span class="tech-tag">Subnetting</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-link">View Details →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ REVIEWS ═══ -->
+<section id="reviews">
+  <div class="review-header">
+    <div>
+      <div class="section-label reveal">Testimonials</div>
+      <h2 class="section-title reveal">What People <span>Say</span></h2>
+    </div>
+    <div class="avg-rating reveal">
+      <div class="avg-num">4.9</div>
+      <div class="avg-info">
+        <span class="stars">★★★★★</span>
+        <span class="avg-label">Average Rating<br><span class="avg-count">from 12 reviews</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-carousel" id="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-msg">"Bilal delivered an outstanding AI model for our project. His understanding of machine learning concepts and ability to implement them practically is remarkable for his academic level."</p>
+      <div class="reviewer-info">
+        <div class="reviewer-avatar" style="background:linear-gradient(135deg,#00d4ff,#7c3aed)">AK</div>
+        <div>
+          <div class="reviewer-name">Ahmed Khan</div>
+          <div class="reviewer-role">Software Engineer · Tech Startup</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-1">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-msg">"The face expression detection system he built was incredibly accurate. Bilal demonstrates a rare combination of AI knowledge and practical engineering skills. Highly recommended!"</p>
+      <div class="reviewer-info">
+        <div class="reviewer-avatar" style="background:linear-gradient(135deg,#a855f7,#00d4ff)">SR</div>
+        <div>
+          <div class="reviewer-name">Sara Raza</div>
+          <div class="reviewer-role">Data Scientist · Research Lab</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-2">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-msg">"Bilal's work on our database project was exceptional. His knowledge of both SQL and Neo4j, plus his clean coding practices, made him invaluable to our team."</p>
+      <div class="reviewer-info">
+        <div class="reviewer-avatar" style="background:linear-gradient(135deg,#f59e0b,#f97316)">MZ</div>
+        <div>
+          <div class="reviewer-name">Muhammad Zaid</div>
+          <div class="reviewer-role">Full Stack Developer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Review -->
+  <div class="review-form-wrap reveal">
+    <div class="section-label" style="margin-bottom:1rem">Leave a Review</div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="r-name">Your Name *</label>
+        <input type="text" id="r-name" placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label for="r-email">Email Address *</label>
+        <input type="email" id="r-email" placeholder="john@example.com">
+      </div>
+      <div class="form-group">
+        <label for="r-company">Company</label>
+        <input type="text" id="r-company" placeholder="Your company (optional)">
+      </div>
+      <div class="form-group">
+        <label for="r-role">Your Role</label>
+        <input type="text" id="r-role" placeholder="e.g. Software Engineer">
+      </div>
+      <div class="form-group full">
+        <label>Rating *</label>
+        <div class="star-rating" id="star-rating">
+          <button class="star-btn" data-val="1" type="button">★</button>
+          <button class="star-btn" data-val="2" type="button">★</button>
+          <button class="star-btn" data-val="3" type="button">★</button>
+          <button class="star-btn" data-val="4" type="button">★</button>
+          <button class="star-btn" data-val="5" type="button">★</button>
+        </div>
+      </div>
+      <div class="form-group full">
+        <label for="r-msg">Your Review *</label>
+        <textarea id="r-msg" rows="4" placeholder="Share your experience working with Muhammad Bilal..."></textarea>
+      </div>
+    </div>
+    <button class="btn-submit" id="btn-review-submit" type="button">Submit Review</button>
+    <div class="form-msg" id="review-form-msg"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Let's <span>Work</span><br>Together</h2>
+      <p class="contact-desc">Have a project in mind? Looking for an AI developer or full stack engineer? I'm open to freelance work, collaborations, and exciting opportunities.</p>
+      <div class="contact-info-items">
+        <a href="mailto:bilalsuleman780@gmail.com" class="contact-info-card">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">bilalsuleman780@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://wa.me/923018032287" target="_blank" class="contact-info-card">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-info-label">WhatsApp</div>
+            <div class="contact-info-value">+92 301 803 2287</div>
+          </div>
+        </a>
+        <div class="contact-info-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">Pakistan 🇵🇰</div>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/923018032287" target="_blank" rel="noopener" class="whatsapp-cta">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp Now
+      </a>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <form id="contact-form" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="c-name">Full Name *</label>
+            <input type="text" id="c-name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email *</label>
+            <input type="email" id="c-email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="c-phone">Phone (Optional)</label>
+            <input type="tel" id="c-phone" placeholder="+92 300 0000000">
+          </div>
+          <div class="form-group">
+            <label for="c-subject">Subject *</label>
+            <input type="text" id="c-subject" placeholder="Project inquiry..." required>
+          </div>
+          <div class="form-group full">
+            <label for="c-msg">Message *</label>
+            <textarea id="c-msg" rows="5" placeholder="Tell me about your project, idea, or opportunity..." required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit" id="btn-contact-submit">Send Message →</button>
+        <div class="form-msg" id="contact-form-msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">MB</div>
+      <div>
+        <div class="footer-name">Muhammad Bilal</div>
+        <div class="footer-tagline">AI Engineer &amp; Full Stack Developer</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:bilalsuleman780@gmail.com">Email</a>
+      <a href="https://wa.me/923018032287" target="_blank">WhatsApp</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2024 Muhammad Bilal · BS Computer Science · Pakistan 🇵🇰</div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/923018032287" target="_blank" rel="noopener" class="float-whatsapp" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" title="Back to top" aria-label="Scroll to top">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
