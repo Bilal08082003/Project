@@ -15,7 +15,7 @@ const errorHandler = require('./middleware/errorHandler');
 const authRoutes = require('./routes/auth');
 const publicRoutes = require('./routes/public');
 const adminRoutes = require('./routes/admin');
-const cors = require("cors");
+
 const app = express();
 app.enable('trust proxy');
 
